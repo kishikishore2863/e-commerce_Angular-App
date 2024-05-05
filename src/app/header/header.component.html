@@ -1,14 +1,23 @@
-<div>
+<div class="">
   <div class="w-full h-9 p-1 bg-slate-200">
-    <marquee behavior="" direction="left">this id a demo</marquee>
+    <marquee
+      class="text-red-500 text-sm"
+      behavior=""
+      direction="left"
+      [innerHTML]="sanitizedData"
+    ></marquee>
   </div>
   <div class="w-full px-14 py-[14px] flex justify-between">
-    <h1 class="hover:to-blue-400">Happy Aspirants:</h1>
-    <button class="text-sm">LOGIN</button>
+    <h1 class="hover:text-blue-400 text-xs">
+      Happy Aspirants:
+      <span class="text-red-500 animate-pulse">{{ bata }}</span>
+    </h1>
+
+    <button class="text-sm hover:text-blue-400">LOGIN</button>
   </div>
   <hr />
-  <div>
-    <div class="w-full h-[69px] px-14 flex justify-between">
+  <div class="sticky top-0 w-full h-[69px] bg-white">
+    <div class="sticky w-full h-[69px] px-14 flex justify-between">
       <img
         class="w-[250px] h-[54px]"
         src="https://spardhaarivu.in/assets/images/home/home-logo.png"
