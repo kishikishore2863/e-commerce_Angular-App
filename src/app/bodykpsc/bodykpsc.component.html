@@ -1,21 +1,21 @@
 <div class="">
-  <h1 class="mt-[42px] mb-[14px] text-center text-[20px] font-bold">
-    FEATURED MAGAZINES
+  <h1 class="mt-[42px] mb-[14px] align-sub text-center text-[20px] font-bold">
+    KPSC & GROUP-C MAGAZINES
   </h1>
-  <hr class="mb-1" />
+  <hr />
   <h3 class="text-center font-extralight text-[12px] text-gray-400">
-    our monthly magazines are available to buy
+    our monthly magazines are available to buys
   </h3>
 </div>
-<div class="flex justify-evenly">
+<div class="flex justify-evenly mb-[50px]">
   <div
     *ngFor="let item of data"
-    class="h-[354px] w-[231px] shadow-2xl rounded-lg hover:shadow-none m-[14px]"
+    class="h-[354px] w-[231px] shadow-2xl rounded-lg m-[14px]"
   >
     <img
       [src]="item.magazineImageUrl"
       alt="{{ item.magazineName }}"
-      class="h-[240px] w-[211px]"
+      class="h-[240px] w-[231px]"
     />
     <div class="mx-[10px] pt-3">
       <div class="flex justify-between font-extralight text-[12px]">
@@ -29,8 +29,10 @@
 
     <div class="flex justify-between mx-[10px]">
       <h1 class="text[16px]">
-        ₹{{ item.discountAmount
-        }}<span class="text-[8px]">₹{{ item.actualAmount }}</span>
+        ₹{{ item.upscGroupCMagazineType[0].discountAmount
+        }}<span class="text-[8px]"
+          >₹{{ item.upscGroupCMagazineType[0].actualAmount }}</span
+        >
       </h1>
       <button class="text-[12px] text-green-500">ADD TO CART</button>
     </div>

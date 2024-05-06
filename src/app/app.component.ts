@@ -3,6 +3,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
+import { BodykpscComponent } from './bodykpsc/bodykpsc.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
     RouterLinkActive,
     HeaderComponent,
     BodyComponent,
+    BodykpscComponent,
     FooterComponent,
   ],
   templateUrl: './app.component.html',
