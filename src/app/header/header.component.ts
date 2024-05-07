@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
@@ -13,7 +14,12 @@ export class HeaderComponent implements OnInit {
   bata: any;
   sanitizedData!: SafeHtml;
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
+  constructor(
+    private route: Router,
+    private ActivatedRoute: ActivatedRoute,
+    private http: HttpClient,
+    private sanitizer: DomSanitizer
+  ) {}
 
   ngOnInit(): void {
     this.fetchDetails();
@@ -30,6 +36,7 @@ export class HeaderComponent implements OnInit {
         this.sanitizedData = this.sanitizer.bypassSecurityTrustHtml(this.data);
       });
   }
+
   public fetchAspirants() {
     this.http
       .get(
@@ -38,5 +45,10 @@ export class HeaderComponent implements OnInit {
       .subscribe((res: any) => {
         this.bata = res.numberOfUsers;
       });
+  }
+
+  // Functionality to redirect to next component
+  cart() {
+    this.route.navigate(['/app/home']);
   }
 }

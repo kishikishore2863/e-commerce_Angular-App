@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodykpscComponent } from './bodykpsc/bodykpsc.component';
+import { Carousel02Component } from './carousel/carousel.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { BodykpscComponent } from './bodykpsc/bodykpsc.component';
     RouterLink,
     RouterLinkActive,
     HeaderComponent,
+    Carousel02Component,
     BodyComponent,
     BodykpscComponent,
     FooterComponent,

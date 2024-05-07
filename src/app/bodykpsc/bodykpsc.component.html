@@ -7,10 +7,10 @@
     our monthly magazines are available to buys
   </h3>
 </div>
-<div class="flex justify-evenly mb-[50px]">
+<div class="flex justify-start mb-[50px]">
   <div
     *ngFor="let item of data"
-    class="h-[354px] w-[231px] shadow-2xl rounded-lg m-[14px]"
+    class="h-[354px] w-[231px] shadow-2xl rounded-lg m-[14px] hover:shadow-none"
   >
     <img
       [src]="item.magazineImageUrl"
@@ -30,11 +30,24 @@
     <div class="flex justify-between mx-[10px]">
       <h1 class="text[16px]">
         ₹{{ item.upscGroupCMagazineType[0].discountAmount
-        }}<span class="text-[8px]"
+        }}<span class="text-[8px] line-through"
           >₹{{ item.upscGroupCMagazineType[0].actualAmount }}</span
         >
       </h1>
       <button class="text-[12px] text-green-500">ADD TO CART</button>
     </div>
+  </div>
+</div>
+<div class="w-full h-[205px] bg-lime-500 text-white pt-[42px]">
+  <h1 class="text-center text-[24px] mb-[14px] font-bold">
+    SUBSCRIBE FOR OUR PREMIUM MAGAZINES
+  </h1>
+  <p class="text-center font-extralight">
+    These magazines will make your preparation easy for civil service exams
+  </p>
+  <div class="flex justify-center">
+    <button class="bg-slate-800 rounded-3xl p-2 mt-8 w-[220px]">
+      SUBSCRIBE
+    </button>
   </div>
 </div>

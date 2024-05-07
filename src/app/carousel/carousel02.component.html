@@ -1,0 +1,32 @@
+<div class="w-full h-[375px] relative">
+  <c-carousel [interval]="0">
+    <c-carousel-inner>
+      <c-carousel-item *ngFor="let item of data">
+        <img
+          [src]="item.backgroundImageUrl"
+          alt="image"
+          class="d-block w-100"
+          loading="lazy"
+        />
+      </c-carousel-item>
+    </c-carousel-inner>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="flex justify-between w-full">
+        <c-carousel-control
+          class="ml-4"
+          [routerLink]
+          caption="Previous"
+          direction="prev"
+          >＜</c-carousel-control
+        >
+        <c-carousel-control
+          class="mr-4"
+          [routerLink]
+          caption="Next"
+          direction="next"
+          >＞</c-carousel-control
+        >
+      </div>
+    </div>
+  </c-carousel>
+</div>
