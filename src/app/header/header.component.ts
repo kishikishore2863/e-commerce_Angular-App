@@ -49,6 +49,12 @@ export class HeaderComponent implements OnInit {
 
   // Functionality to redirect to next component
   cart() {
-    this.route.navigate(['/app/home']);
+    this.route.navigate(['/cart']);
+  }
+  redirectToHome() {
+    this.route.navigate(['']);
+  }
+  redirectToLogin() {
+    this.route.navigate(['/login']);
   }
 }
