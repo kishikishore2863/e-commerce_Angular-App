@@ -51,12 +51,13 @@
 >
   <div
     *ngFor="let item of data"
-    class="h-[354px] w-[231px] shadow-2xl rounded-lg hover:shadow-none m-[14px] sm:m-0"
+    class="h-[354px] w-[231px] shadow-2xl rounded-lg m-[14px] sm:m-0 hover:shadow-none"
   >
+    <div class=""></div>
     <img
       [src]="item.magazineImageUrl"
       alt="{{ item.magazineName }}"
-      class="h-[240px] w-[211px]"
+      class="h-[240px] w-[231px]"
     />
     <div class="mx-[10px] pt-3">
       <div class="flex justify-between font-extralight text-[12px]">
