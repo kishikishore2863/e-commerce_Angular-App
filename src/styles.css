@@ -2,3 +2,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .custom-bg {
+    background-color: #f3e8ff;
+  }
+
+  .custom-text {
+    @apply text-purple-600 font-semibold;
+  }
+  .body {
+    display: inline-block;
+    padding: 1em 2em;
+
+    color: black;
+    background: red; /* default color */
+
+    /* "to left" / "to right" - affects initial color */
+    background: linear-gradient(
+        to left,
+        rgb(250, 249, 249) 50%,
+        rgb(118, 119, 119) 50%
+      )
+      right;
+    background-size: 200%;
+    transition: 0.5s ease-out;
+  }
+  .body:hover {
+    background-position: left;
+    color: white;
+  }
+}
